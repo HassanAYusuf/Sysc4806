@@ -3,3 +3,8 @@ jdk:
   - openjdk10
   - oraclejdk12
   - oraclejdk13
+
+deploy:
+  provider: heroku
+  api-key: $HEROKU_API_KEY
+  app: lippep-spring-boot-test
