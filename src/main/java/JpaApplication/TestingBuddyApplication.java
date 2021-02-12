@@ -17,14 +17,14 @@ import org.springframework.test.web.servlet.MockMvc;
 @SpringBootTest
 @AutoConfigureMockMvc
 @RunWith(SpringRunner.class)
-public class TestingWebApplicationTest {
+public class TestingBuddyApplication {
 
-	@Autowired
-	private MockMvc mockMvc;
+    @Autowired
+    private MockMvc mockMvc;
 
-	@Test
-	public void shouldReturnDefaultMessage() throws Exception {
-		this.mockMvc.perform(get("/buddy")).andExpect(status().isOk())
-				.andExpect(content().string(containsString("Id:")));
-	}
+    @Test
+    public void shouldReturnDefaultMessage() throws Exception {
+        this.mockMvc.perform(get("/buddy")).andExpect(status().isOk())
+                .andExpect(content().string(containsString("Id:")));
+    }
 }
