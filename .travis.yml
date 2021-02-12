@@ -8,3 +8,6 @@ deploy:
   provider: heroku
   api-key: $HEROKU_API_KEY
   app: lippep-spring-boot-test
+  on:
+    tags: true
+    branch: main
